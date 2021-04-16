@@ -1,8 +1,8 @@
 WA.onEnterZone('myZone', () => {
-WA.sendChatMessage('Hello!', 'Mr Robot');
+WA.sendChatMessage('Hello!', 'Pikatchu');
 
 })
 
 WA.onLeaveZone('myZone', () => {
-	WA.sendChatMessage("Goodbye!", 'Mr Robot');
+	WA.sendChatMessage("Goodbye!", 'Pikatchu');
 })	
