@@ -123,6 +123,34 @@
         }, 
         {
          "draworder":"topdown",
+         "id":24,
+         "name":"Popups",
+         "objects":[
+                {
+                 "height":128.666666666667,
+                 "id":1,
+                 "name":"popuparea",
+                 "properties":[
+                        {
+                         "name":"script",
+                         "type":"string",
+                         "value":"script.js"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":98.6666666666665,
+                 "x":1424,
+                 "y":741.333333333333
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":3,
          "name":"floorLayer",
          "objects":[],
@@ -186,8 +214,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":24,
- "nextobjectid":1,
+ "nextlayerid":25,
+ "nextobjectid":4,
  "orientation":"orthogonal",
  "properties":[
         {
