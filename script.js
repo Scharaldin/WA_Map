@@ -7,8 +7,8 @@ WA.sendChatMessage('Hello!', 'Pikatchu');
         callback: (popup) => {
             popup.close();
        }
-    });
-}]);
+    }];
+});
 
 
 
