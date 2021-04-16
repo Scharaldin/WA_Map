@@ -6,9 +6,9 @@ WA.sendChatMessage('Hello!', 'Pikatchu');
         className: "primary",
         callback: (popup) => {
             popup.close();
-        }
-	}]);
-});
+       }
+    });
+}]);
 
 
 
