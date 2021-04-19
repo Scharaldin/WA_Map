@@ -1,5 +1,6 @@
 WA.onEnterZone('myZone', () => {
 WA.sendChatMessage('Hello!', 'Pikatchu');
+	WA.openTab('https://www.wikipedia.org/');
 });
 
 
