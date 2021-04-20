@@ -199,7 +199,7 @@
                  "visible":true,
                  "width":137,
                  "x":1238,
-                 "y":1226
+                 "y":1198.72727272727
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -211,7 +211,18 @@
          "draworder":"topdown",
          "id":3,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":203.030303030303,
+                 "id":8,
+                 "name":"test",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":136.363636363636,
+                 "x":1093.93939393939,
+                 "y":1200
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -273,7 +284,7 @@
          "y":0
         }],
  "nextlayerid":29,
- "nextobjectid":8,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1642,7 +1653,7 @@
          "margin":0,
          "name":"street",
          "spacing":0,
-         "tilecount":6,
+         "tilecount":0,
          "tileheight":32,
          "tilewidth":32
         }],
