@@ -14,7 +14,7 @@ WA.onLeaveZone('myZone', () => {
 let muralPopup;
 
 muralPopup = WA.onEnterZone('popup_zone', () =>{
-	WA.openPopup("fenster", 'hier gehts zu mural', [{
+	WA.openPopup("test", 'Hier gehts zu mural', [{
 		label: "Mural",
 		className: "primary",
 		callback: (popup) => {
