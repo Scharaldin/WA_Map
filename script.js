@@ -14,13 +14,19 @@ WA.onLeaveZone('myZone', () => {
 let muralPopup;
 
 muralPopup = WA.onEnterZone('popup_zone', () =>{
-	WA.openPopup("test", 'Hier gehts zu mural', [{
-		label: "Mural",
+	WA.openPopup("test", 'Hallo ich bin eine Pflanze und ich habe ein Muralboard für dich!!!', [{
+		label: "Zu Mural",
 		className: "primary",
 		callback: (popup) => {
 			WA.openTab('https://app.mural.co/invitation/mural/avanade7180/1616577121346?sender=ua67182cfa5bf2c37d0600807&key=abb5a9f7-b254-47cc-a05e-f562fa87ce1a');
 			popup.close();
 			}
+		},{label: "Schließen",
+		className: "warning",
+		callback: (popup) => {
+			popup.close();
+		}
+			
 		}]);
 	});
 			
