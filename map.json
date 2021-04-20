@@ -188,35 +188,18 @@
         {
          "draworder":"topdown",
          "id":24,
-         "name":"Popups",
+         "name":"popup",
          "objects":[
-                {
-                 "height":128.666666666667,
-                 "id":1,
-                 "name":"popuparea",
-                 "properties":[
-                        {
-                         "name":"script",
-                         "type":"string",
-                         "value":"script.js"
-                        }],
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":98.6666666666665,
-                 "x":1680,
-                 "y":741.333333333333
-                }, 
                 {
                  "height":212,
                  "id":4,
-                 "name":"fenster_1",
+                 "name":"fenster",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":137,
-                 "x":1238,
-                 "y":1226
+                 "x":1262.24242424242,
+                 "y":1189.63636363636
                 }],
          "opacity":1,
          "type":"objectgroup",
