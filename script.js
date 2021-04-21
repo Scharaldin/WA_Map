@@ -34,7 +34,7 @@ WA.onEnterZone(zoneTest, () => {
 	}]);
 });
 
-WA.onLeaveZone(zoneTest, () =>{
+WA.onLeaveZone(zoneTest, () => {
 	closePopUp();
 });
 
