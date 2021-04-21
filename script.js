@@ -17,6 +17,7 @@ WA.onLeaveZone('myZone', () => {
 	
 
 WA.onEnterZone(zoneTest, () => {
+	closePopUp();
 	currentPopup = WA.openPopup("test", 'Hallo ich bin eine Pflanze und ich habe ein Muralboard für dich!!!',[
 	{
 		label: "Zu Mural",
@@ -33,7 +34,9 @@ WA.onEnterZone(zoneTest, () => {
 	}]);
 });
 
-WA.onLeaveZone(zoneTest, closePopUp())
+WA.onLeaveZone(zoneTest, () =>{
+	closePopUp();
+});
 
 function closePopUp(){
 if(currentPopup !== undefined) {
