@@ -1,11 +1,12 @@
-var zoneTest = "popup_zone";
+var zoneMural = "popup_mural";
+var whiteBoardZone = "popup_whiteboard";
 var muralLink = "https://app.mural.co/invitation/mural/avanade7180/1616577121346?sender=ua67182cfa5bf2c37d0600807&key=abb5a9f7-b254-47cc-a05e-f562fa87ce1a";
+var whiteboardLink = "https://www.microsoft.com/de-de/microsoft-365/microsoft-whiteboard/digital-whiteboard-app";
 var currentPopup = undefined;
 
 
 WA.onEnterZone('myZone', () => {
-WA.sendChatMessage('Hello your Muralboard will open in about two seconds!', 'Pikatchu');
-setTimeout(() => WA.openTab('https://app.mural.co/invitation/mural/avanade7180/1616577121346?sender=ua67182cfa5bf2c37d0600807&key=abb5a9f7-b254-47cc-a05e-f562fa87ce1a'), 2500);
+WA.sendChatMessage('Wenn du ein Meeting versehentlich beendet hast und wieder rein willst musst du erst aus dem bEsprächungsraum gehen und wieder rein laufen !!! ', 'Info');
 });
 
 
@@ -18,15 +19,15 @@ WA.onLeaveZone('myZone', () => {
 
 WA.onEnterZone(zoneTest, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("test", 'Hallo ich bin eine Pflanze und ich habe ein Muralboard für dich!!!',[
+	currentPopup = WA.openPopup("test", 'Hallo ich bin ein Muralboard, willst du mich aufrufen?',[
 	{
-		label: "Zu Mural",
+		label: "Ja, bitte!",
 		className: "primary",
 		callback: (popup) => {
 			WA.openTab(muralLink);
 			popup.close();
 			}
-		},{label: "Schließen",
+		},{label: "Nein, lieber nicht",
 		className: "warning",
 		callback: (popup) => {
 			popup.close();
@@ -34,7 +35,30 @@ WA.onEnterZone(zoneTest, () => {
 	}]);
 });
 
-WA.onLeaveZone(zoneTest, () => {
+
+WA.onEnterZone(whiteBoardZone, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("test_whiteboard", 'Ich bin ein Whiteboard, möchtest du mich aufrufen ?',[
+	{
+		label: "Ja, bitte!",
+		className: "primary",
+		callback: (popup) => {
+			WA.openTab(whiteboardLink);
+			popup.close();
+			}
+		},{label: "Nein, lieber nicht",
+		className: "warning",
+		callback: (popup) => {
+			popup.close();
+		}
+	}]);
+});
+
+WA.onLeaveZone(zoneTest, () =>{
+	closePopUp();
+});
+
+WA.onLeaveZone(whiteBoardZone, () =>{
 	closePopUp();
 });
 
