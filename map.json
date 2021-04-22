@@ -100,7 +100,7 @@
                 {
                  "name":"zone",
                  "type":"string",
-                 "value":"popup_zone"
+                 "value":"popup_whiteboard"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -123,7 +123,7 @@
                 {
                  "name":"zone",
                  "type":"string",
-                 "value":"popup_zone"
+                 "value":"popup_mural"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -222,42 +222,31 @@
         }, 
         {
          "draworder":"topdown",
-         "id":24,
-         "name":"Popups",
-         "objects":[
-                {
-                 "height":82,
-                 "id":4,
-                 "name":"fenster",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":245,
-                 "x":2452,
-                 "y":132
-                }, 
-                {
-                 "height":154,
-                 "id":8,
-                 "name":"fenster_1",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30.6666666666665,
-                 "x":2367.33333333333,
-                 "y":771.333333333333
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
          "id":3,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":124,
+                 "id":9,
+                 "name":"test",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":222,
+                 "x":2464,
+                 "y":124
+                }, 
+                {
+                 "height":156,
+                 "id":10,
+                 "name":"test_whiteboard",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":2366,
+                 "y":766
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -307,7 +296,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":9,
+ "nextobjectid":11,
  "orientation":"orthogonal",
  "properties":[
         {
