@@ -17,7 +17,7 @@ WA.onLeaveZone('myZone', () => {
 });	
 	
 
-WA.onEnterZone(zoneTest, () => {
+WA.onEnterZone(zoneMural, () => {
 	closePopUp();
 	currentPopup = WA.openPopup("test", 'Hallo ich bin ein Muralboard, willst du mich aufrufen?',[
 	{
@@ -54,7 +54,7 @@ WA.onEnterZone(whiteBoardZone, () => {
 	}]);
 });
 
-WA.onLeaveZone(zoneTest, () =>{
+WA.onLeaveZone(zoneMural, () =>{
 	closePopUp();
 });
 
