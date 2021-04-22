@@ -6,13 +6,13 @@ var currentPopup = undefined;
 
 
 WA.onEnterZone('myZone', () => {
-WA.sendChatMessage('Wenn du ein Meeting versehentlich beendet hast und wieder rein willst musst du erst aus dem bEsprächungsraum gehen und wieder rein laufen !!! ', 'Info');
+WA.sendChatMessage('Wenn du ein Meeting versehentlich beendet hast und wieder rein willst musst du erst aus dem Besprechungsraum gehen und wieder rein laufen !!! ', 'Info');
 });
 
 
 
 WA.onLeaveZone('myZone', () => {
-	WA.sendChatMessage("Goodbye have a nice day!", 'Pikatchu');
+	WA.sendChatMessage("Bis später", 'Info');
 	
 });	
 	
