@@ -231,6 +231,11 @@
          "opacity":1,
          "properties":[
                 {
+                 "name":"playAudio",
+                 "type":"string",
+                 "value":"https:\/\/scharaldin.github.io\/WA_Map\/AUD-20210303-WA0041.mp3"
+                }, 
+                {
                  "name":"script",
                  "type":"string",
                  "value":"script.js"
