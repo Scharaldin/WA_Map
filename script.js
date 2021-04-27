@@ -112,12 +112,30 @@ WA.onEnterZone(zoneYouTube, () => {
 
 WA.onEnterZone(zonePictureLink, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein YouTube Video, möchtest du mich aufrufen ?',[
+	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein Verlinktes Bild, möchtest du mich aufrufen ?',[
 	{
 		label: "Ja, bitte!",
 		className: "primary",
 		callback: (popup) => {
 			WA.openCoWebSite(PictureLink);
+			popup.close();
+			}
+		},{label: "Nein, lieber nicht",
+		className: "warning",
+		callback: (popup) => {
+			popup.close();
+		}
+	}]);
+});
+
+WA.onEnterZone(zonePictureUpload, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein Hochgeladenes Bild, möchtest du mich aufrufen ?',[
+	{
+		label: "Ja, bitte!",
+		className: "primary",
+		callback: (popup) => {
+			WA.openCoWebSite(PictureUpload);
 			popup.close();
 			}
 		},{label: "Nein, lieber nicht",
@@ -149,6 +167,16 @@ WA.onLeaveZone(zoneWhiteboard, () =>{
 });
 
 WA.onLeaveZone(zonePDF, () =>{
+	closePopUp();
+	WA.closeCoWebSite();
+});
+
+WA.onLeaveZone(zonePictureLink, () =>{
+	closePopUp();
+	WA.closeCoWebSite();
+});
+
+WA.onLeaveZone(zonePictureUpload, () =>{
 	closePopUp();
 	WA.closeCoWebSite();
 });
