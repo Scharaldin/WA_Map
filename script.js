@@ -150,7 +150,7 @@ WA.onEnterZone(zonePictureUpload, () => {
 
 WA.onEnterZone(zoneAudioPlayable, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("popup_audioPlayable", 'Hörst du diese Musik ?')
+	currentPopup = WA.openPopup("popup_audioPlayable", 'Hörst du diese Musik ?',[])
 });
 
 
