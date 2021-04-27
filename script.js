@@ -14,11 +14,11 @@ var zoneWhiteboard = "popup_whiteboard";
 var muralLink = "https://app.mural.co/invitation/mural/avanade7180/1616577121346?sender=ua67182cfa5bf2c37d0600807&key=abb5a9f7-b254-47cc-a05e-f562fa87ce1a";
 var whiteboardLink = "https://www.microsoft.com/de-de/microsoft-365/microsoft-whiteboard/digital-whiteboard-app";
 var PDF = 'https://scharaldin.github.io/WA_Map/testPDF.pdf';
-var PictureLink = "a";
-var PictureUpload = "a";
+var PictureLink = 'https://www.her-career.com/dokumente/logo/104440_rgb_72.jpg';
+var PictureUpload = 'https://scharaldin.github.io/WA_Map/real2.png';
 var YouTube = 'https://www.youtube.com/embed/GimrxP2U0ZE';
 var VideoStream = "a";
-var AudioPlayable ="a";
+
 var currentPopup = undefined;
 
 
@@ -108,6 +108,36 @@ WA.onEnterZone(zoneYouTube, () => {
 			popup.close();
 		}
 	}]);
+});
+
+WA.onEnterZone(zonePictureLink, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein YouTube Video, möchtest du mich aufrufen ?',[
+	{
+		label: "Ja, bitte!",
+		className: "primary",
+		callback: (popup) => {
+			WA.openCoWebSite(PictureLink);
+			popup.close();
+			}
+		},{label: "Nein, lieber nicht",
+		className: "warning",
+		callback: (popup) => {
+			popup.close();
+		}
+	}]);
+});
+
+
+
+WA.onEnterZone(zoneAudioPlayable, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("popup_audioPlayable", 'Hörst du diese Musik ?')
+});
+
+
+WA.onLeaveZone(zoneAudioPlayable, () =>{
+	closePopUp();
 });
 
 WA.onLeaveZone(zoneMural, () =>{
