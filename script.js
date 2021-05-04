@@ -130,7 +130,7 @@ WA.onEnterZone(zonePictureLink, () => {
 
 WA.onEnterZone(zonePictureUpload, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein Hochgeladenes Bild, möchtest du mich aufrufen ?',[
+	currentPopup = WA.openPopup("popup_pictureUpload", 'Ich bin ein Hochgeladenes Bild, möchtest du mich aufrufen ?',[
 	{
 		label: "Ja, bitte!",
 		className: "primary",
