@@ -12,7 +12,7 @@ var zoneRundgang = "zone_NPCRundgang";
 
 //Variablen die auf inhalte Verweisen
 
-var muralLink = "https://app.mural.co/invitation/mural/avanade7180/1616577121346?sender=ua67182cfa5bf2c37d0600807&key=abb5a9f7-b254-47cc-a05e-f562fa87ce1a";
+var muralLink = "https://app.mural.co/t/avanade7180/m/avanade7180/1616577121346/ef15fab64a48c81b5cd6e722662ba31c6d5735f2";
 var whiteboardLink = "https://www.microsoft.com/de-de/microsoft-365/microsoft-whiteboard/digital-whiteboard-app";
 var PDF = 'https://scharaldin.github.io/WA_Map/testPDF.pdf';
 var PictureLink = 'https://www.her-career.com/dokumente/logo/104440_rgb_72.jpg';
@@ -38,7 +38,7 @@ WA.onLeaveZone('myZone', () => {
 
 WA.onEnterZone(zoneMural, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("test", 'Hallo ich bin ein Muralboard, willst du mich aufrufen?',[
+	currentPopup = WA.openPopup("test", 'Thats a Mural board do you want to open it?',[
 	{
 		label: "Ja, bitte!",
 		className: "primary",
