@@ -8,6 +8,7 @@ var zonePictureLink = "zone_pictureLink";
 var zonePictureUpload = "zone_pictureUpload";
 var zoneAudioPlayable = "zone_audioPlayable";
 var zoneWhiteboard = "popup_whiteboard";
+var zoneRundgang = "zone_NPCRundgang";
 
 //Variablen die auf inhalte Verweisen
 
@@ -18,6 +19,7 @@ var PictureLink = 'https://www.her-career.com/dokumente/logo/104440_rgb_72.jpg';
 var PictureUpload = 'https://scharaldin.github.io/WA_Map/real2.png';
 var YouTube = 'https://www.youtube.com/embed/GimrxP2U0ZE';
 var VideoStream = "a";
+var PhysicalStudio = 'https://tour.metareal.com/apps/player?asset=0bc88dca-2e1b-4292-9cf8-1b299a509de1&position=0.00x1.00y0.00z&rotation=0.00x-336.96y0.00z' ;
 
 var currentPopup = undefined;
 
@@ -50,6 +52,26 @@ WA.onEnterZone(zoneMural, () => {
 			popup.close();
 		}
 	}]);
+});
+
+WA.onEnterZone(zoneRundgang, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("popup_NPCRundgang", 'Willst du sehen wie das Physische Studio aussieht?',[
+		{
+			label: "Ja",
+			className: "primary",
+			callback: (popup) => {
+				WA.openCoWebSite(PhysicalStudio);
+				popup.close();
+			}
+		},{
+				label: "Nein",
+				className: "warning",
+				callback:(popup) => {
+				popup.close();
+		
+		}
+		}]);
 });
 
 
@@ -130,7 +152,7 @@ WA.onEnterZone(zonePictureLink, () => {
 
 WA.onEnterZone(zonePictureUpload, () => {
 	closePopUp();
-	currentPopup = WA.openPopup("popup_pictureUpload", 'Ich bin ein Hochgeladenes Bild, möchtest du mich aufrufen ?',[
+	currentPopup = WA.openPopup("popup_pictureLink", 'Ich bin ein Hochgeladenes Bild, möchtest du mich aufrufen ?',[
 	{
 		label: "Ja, bitte!",
 		className: "primary",
@@ -161,6 +183,11 @@ WA.onLeaveZone(zoneAudioPlayable, () =>{
 WA.onLeaveZone(zoneMural, () =>{
 	closePopUp();
 });
+
+WA.onLeaveZone(zoneRundgang, () =>{
+	closePopUp();
+	WA.closeCoWebSite();
+})
 
 WA.onLeaveZone(zoneWhiteboard, () =>{
 	closePopUp();
