@@ -9,6 +9,7 @@ var zonePictureUpload = "zone_pictureUpload";
 var zoneAudioPlayable = "zone_audioPlayable";
 var zoneWhiteboard = "popup_whiteboard";
 var zoneRundgang = "zone_NPCRundgang";
+var zonePacman = "zone_pacman";
 
 //Variablen die auf inhalte Verweisen
 
@@ -20,6 +21,7 @@ var PictureUpload = 'https://scharaldin.github.io/WA_Map/real2.png';
 var YouTube = 'https://www.youtube.com/embed/GimrxP2U0ZE';
 var VideoStream = "a";
 var PhysicalStudio = 'https://tour.metareal.com/apps/player?asset=0bc88dca-2e1b-4292-9cf8-1b299a509de1&position=0.00x1.00y0.00z&rotation=0.00x-336.96y0.00z' ;
+var Pacman = 'https://scharaldin.github.io/WA_Map/docs/index.html'
 
 var currentPopup = undefined;
 
@@ -122,6 +124,24 @@ WA.onEnterZone(zoneYouTube, () => {
 		className: "primary",
 		callback: (popup) => {
 			WA.openCoWebSite(YouTube);
+			popup.close();
+			}
+		},{label: "Nein, lieber nicht",
+		className: "warning",
+		callback: (popup) => {
+			popup.close();
+		}
+	}]);
+});
+
+WA.onEnterZone(zonePacman, () => {
+	closePopUp();
+	currentPopup = WA.openPopup("popup_pacman", 'Lust auf ne runde Pacman ?',[
+	{
+		label: "Ja, bitte!",
+		className: "primary",
+		callback: (popup) => {
+			WA.openCoWebSite(Pacman);
 			popup.close();
 			}
 		},{label: "Nein, lieber nicht",
