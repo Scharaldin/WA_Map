@@ -233,6 +233,11 @@ WA.onLeaveZone(zoneYouTube, () =>{
 	WA.closeCoWebSite();
 });
 
+WA.onLeaveZone(zonePacman, () =>{
+	closePopUp();
+	WA.closeCoWebSite();
+});
+
 function closePopUp(){
 if(currentPopup !== undefined) {
 	currentPopup.close();
