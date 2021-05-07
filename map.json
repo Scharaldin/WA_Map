@@ -264,6 +264,11 @@
                  "value":true
                 }, 
                 {
+                 "name":"audioVolume",
+                 "type":"float",
+                 "value":0.5
+                }, 
+                {
                  "name":"playAudio",
                  "type":"string",
                  "value":"https:\/\/scharaldin.github.io\/WA_Map\/Lounge.mp3"
