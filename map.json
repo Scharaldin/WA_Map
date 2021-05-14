@@ -285,6 +285,11 @@
                  "name":"audioPlay",
                  "type":"string",
                  "value":"https:\/\/scharaldin.github.io\/WA_Map\/Tapwater.mp3"
+                }, 
+                {
+                 "name":"audioVolume",
+                 "type":"float",
+                 "value":1
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -438,7 +443,7 @@
          "name":"floor",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":93,
          "x":0,
          "y":0
